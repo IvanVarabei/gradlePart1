@@ -1,2 +1,0 @@
-by/epam/assembly/StringUtils.java
- by.epam.assembly.StringUtils
