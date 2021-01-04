@@ -8,14 +8,13 @@ targetCompatibility = 1.8
 configurations.implementation.setCanBeResolved(true)
 configurations.api.setCanBeResolved(true)
 
-task fatJar(type: Jar) {
+jar{
     manifest {
         attributes 'Implementation-Title': 'utils',
                 'Implementation-Version': version
     }
-    baseName = "utils"
+    archivesBaseName= "utils"
     from { configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar
 }
 
 repositories {
